@@ -6,7 +6,7 @@ variable token {
 variable "organizations" {
   type        = set(string)
   default     = ["lowranceworks"]
-  description = "Github organizations."
+  description = "Github organizations to fetch repositories from."
 
   validation {
     condition     = length(var.organizations) > 0
@@ -17,7 +17,7 @@ variable "organizations" {
 variable project_path {
   type        = string
   default     = "~/Projects"
-  description = "The path to create directories on your machine for each Github organization."
+  description = "The path to create directories for each Github organization."
 }
 
 variable base_url {
@@ -28,6 +28,6 @@ variable base_url {
 
 variable repository_query {
   type        = string
-  default     = "is:private"
+  default     = "user:lowranceworks"
   description = "The query used to selet repositories to clone. See https://docs.github.com/search-github"
 }
