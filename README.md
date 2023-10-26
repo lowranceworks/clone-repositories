@@ -7,8 +7,8 @@ The following commands will create a directory for each Github organization and 
 ```zsh
 terraform init
 terraform apply \
-  -var 'token='ghp_asdf' \
-  -var 'project_path=~/Projects' \
+  -var 'token=ghp_asdf' \
+  -var 'project_path=$HOME/Projects' \
   -var 'organizations=[ "lowranceworks", ]' \
   -auto-approve
 
