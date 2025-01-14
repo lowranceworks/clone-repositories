@@ -1,6 +1,5 @@
 data "github_repositories" "default" {
-  # for_each = var.organizations
-  
-  query = var.repository_query
+  query           = "org:infrastructure" # ${var.owner}"
   include_repo_id = true
 }
+
