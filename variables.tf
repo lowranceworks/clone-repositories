@@ -1,33 +1,22 @@
-variable token {
-  type    = string
+variable "token" {
+  type        = string
   description = "Github personal access token."
 }
 
-variable "organizations" {
-  type        = set(string)
-  default     = ["lowranceworks"]
-  description = "Github organizations to fetch repositories from."
-
-  validation {
-    condition     = length(var.organizations) > 0
-    error_message = "You must provide at least one GitHub organization."
-  }
-}
-
-variable project_path {
+variable "owner" {
   type        = string
-  default     = "~/Projects"
-  description = "The path to create directories for each Github organization."
+  default     = "infrastructure"
+  description = "Github username/organization that is the owner of the repositories that you want to clone."
 }
 
-variable base_url {
+variable "project_path" {
+  type        = string
+  default     = "~/projects/"
+  description = "The path to create the github organization directory."
+}
+
+variable "base_url" {
   type        = string
   default     = null
-  description = "Github base url (set to null if you are using github.com"
-}
-
-variable repository_query {
-  type        = string
-  default     = "user:lowranceworks"
-  description = "The query used to selet repositories to clone. See https://docs.github.com/search-github"
+  description = "Github base url (must include 'https://'). Set to 'null' if the company is using github.com."
 }

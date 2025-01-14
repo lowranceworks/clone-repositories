@@ -4,14 +4,12 @@
 
 The following commands will create a directory for each Github organization and then clone the repositories to each respective directory:
 
-```zsh
-terraform init
+```sh
+terraform init && \
 terraform apply \
-  -var 'token=ghp_asdf' \
-  -var 'project_path=$HOME/Projects' \
-  -var 'organizations=[ "lowranceworks", ]' \
+  -var "token=$GH_TOKEN" \
+  -var "base_url=$COMPANY_GITHUB_DOMAIN" \
   -auto-approve
 
-terraform output --raw 'make_directory_commands' | bash
-terraform output --raw 'clone_commands' | bash 
+terraform output --raw git_clone_commands | bash
 ```

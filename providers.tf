@@ -1,5 +1,6 @@
 provider "github" {
   base_url = var.base_url
-  owner    = local.organization
+  owner    = var.owner
   token    = var.token
 }
+
