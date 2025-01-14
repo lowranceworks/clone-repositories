@@ -5,7 +5,7 @@ variable "token" {
 
 variable "owner" {
   type        = string
-  default     = "infrastructure"
+  default     = "lowranceworks"
   description = "Github username/organization that is the owner of the repositories that you want to clone."
 }
 
