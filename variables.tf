@@ -17,6 +17,6 @@ variable "project_path" {
 
 variable "base_url" {
   type        = string
-  default     = null
-  description = "Github base url (must include 'https://'). Set to 'null' if the company is using github.com."
+  default     = "https://github.com"
+  description = "Github base url (must include 'https://'). Set to 'https://api.github.com' for github.com."
 }

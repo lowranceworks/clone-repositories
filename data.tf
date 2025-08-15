@@ -1,5 +1,5 @@
 data "github_repositories" "default" {
-  query           = "org:infrastructure" # ${var.owner}"
+  query           = "org:${var.owner}"
   include_repo_id = true
 }
 

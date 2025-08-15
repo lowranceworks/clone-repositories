@@ -2,14 +2,14 @@
 
 ## TLDR
 
-The following commands will generate `git clone` commamds:
+The following commands will generate `git clone` commands:
 
 ```sh
-terraform init && \
+terraform init
+
 terraform apply \
-  -var "owner=$GH_OWNER" \
+  -var "owner=lowranceworks" \
   -var "token=$GH_TOKEN" \
-  -var "base_url=$GH_DOMAIN" \
   -auto-approve
 
 terraform output --raw git_clone_commands | bash
