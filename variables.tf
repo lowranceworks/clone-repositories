@@ -9,6 +9,12 @@ variable "owner" {
   description = "Github username/organization that is the owner of the repositories that you want to clone."
 }
 
+variable "organizations" {
+  type        = list(string)
+  default     = ["lowranceworks", ]
+  description = "List of Github organizations to clone repositories from."
+}
+
 variable "project_path" {
   type        = string
   default     = "~/projects/"
