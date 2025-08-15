@@ -36,3 +36,7 @@ terraform.rc
 # Ignore files that could contain sensitive data
 *.key
 *sensitive*
+.envrc
+.env
+.env.local
+.env.*.local
