@@ -4,7 +4,7 @@ on:
     types: [closed]
 jobs:
   create-release:
-    uses: lowranceworks/common-workflows/.github/workflows/releases/create-tag-and-release.yaml@main
+    uses: lowranceworks/common-workflows/.github/create-tag-and-release.yaml@main
     permissions:
       contents: write
       pull-requests: read
